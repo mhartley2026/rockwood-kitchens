@@ -358,13 +358,56 @@ a { color: inherit; text-decoration: none; }
   .grid-2, .grid-split-5-7, .grid-split-7-5 { grid-template-columns: 1fr; }
   .grid-3 { grid-template-columns: 1fr; }
   .site-footer .row { grid-template-columns: 1fr 1fr; }
+
+  /* Tighter header padding on mobile */
+  .site-header { padding: 1.25rem 1.25rem; }
+
+  /* Header is a positioning context for the dropdown nav */
+  .site-header .row { position: relative; gap: 1rem; }
+
+  /* Shrink logo on mobile so it doesn't dominate */
+  .site-header .logo-mark { gap: 0.625rem; }
+  .site-header .logo-mark img { height: 36px; }
+  .site-header .logo-mark .title { font-size: 11px; letter-spacing: 0.18em; }
+  .site-header .logo-mark .sub { font-size: 7px; letter-spacing: 0.3em; margin-top: 3px; }
+
+  /* Default state: nav hidden */
   .site-nav { display: none; }
+
+  /* When JS toggles it open: full-width dropdown below header */
+  .site-nav[style*="flex"] {
+    position: absolute !important;
+    top: calc(100% + 0.75rem); left: 0; right: 0;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+    background: var(--ink-2);
+    padding: 0.5rem 1.25rem;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25);
+    z-index: 50;
+  }
+  .site-nav[style*="flex"] a {
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(244, 241, 236, 0.08);
+    color: var(--cream) !important;
+    font-size: 11px;
+    text-align: left;
+  }
+  .site-nav[style*="flex"] a:last-child { border-bottom: none; }
+  .site-nav[style*="flex"] a.current { color: var(--rust) !important; }
+
+  /* Hamburger toggle button */
   .menu-toggle {
     display: block; background: none; border: none; padding: 0.5rem;
     color: inherit; cursor: pointer;
+    font-size: 1.5rem; line-height: 1;
   }
 }
+
 @media (max-width: 600px) {
   .site-footer .row { grid-template-columns: 1fr; }
   .site-footer .copyright-row { flex-direction: column; gap: 0.75rem; text-align: center; }
+
+  /* Hide the FINE FUNCTIONAL ART subtitle on very small screens to save horizontal space */
+  .site-header .logo-mark .sub { display: none; }
 }
