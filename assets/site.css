@@ -404,6 +404,29 @@ a { color: inherit; text-decoration: none; }
   }
 }
 
+@media (max-width: 960px) {
+  /* Catch all inline-style multi-column grids and collapse to single column on mobile.
+     This handles the inline grid-template-columns declarations used in the page content. */
+  section .container > div[style*="grid-template-columns"],
+  section .container div[style*="display: grid"],
+  section div[style*="grid-template-columns: repeat"],
+  section div[style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Ensure all page content respects viewport width — no horizontal overflow */
+  body { overflow-x: hidden; }
+  section, .container { max-width: 100vw; overflow-x: hidden; }
+
+  /* Tighten section padding on mobile so content has breathing room */
+  .section { padding: 4rem 0 !important; }
+  .container { padding-left: 1.25rem !important; padding-right: 1.25rem !important; }
+
+  /* Hero headlines shouldn't be desktop-sized on mobile */
+  .h-hero { font-size: clamp(2rem, 9vw, 3rem) !important; }
+  .h-section { font-size: clamp(1.6rem, 7vw, 2.4rem) !important; }
+}
+
 @media (max-width: 600px) {
   .site-footer .row { grid-template-columns: 1fr; }
   .site-footer .copyright-row { flex-direction: column; gap: 0.75rem; text-align: center; }
