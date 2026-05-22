@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Rockwood Kitchens</title>
+<meta name="description" content="Begin a conversation with Rockwood Kitchens. Based in Ballito, serving the KwaZulu-Natal North Coast by appointment.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Manrope:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+  /* ─── Contact page Zoho form restyle ───
+     The form HTML/wiring below is untouched.
+     This block restyles its container and inputs to match the studio system.
+  */
+  #crmWebToEntityForm.zcwf_lblLeft {
+    background: transparent !important;
+    color: var(--ink) !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    font-family: 'Manrope', sans-serif !important;
+  }
+  #crmWebToEntityForm .zcwf_title { display: none !important; }
+  #crmWebToEntityForm .zcwf_row {
+    margin: 0 0 2.25rem !important;
+    display: block !important;
+  }
+  #crmWebToEntityForm .zcwf_col_lab {
+    width: 100% !important;
+    float: none !important;
+    margin: 0 0 0.55rem !important;
+    padding: 0 !important;
+  }
+  #crmWebToEntityForm .zcwf_col_lab label {
+    font-family: 'Manrope', sans-serif !important;
+    font-size: 10px !important;
+    letter-spacing: 0.28em !important;
+    text-transform: uppercase !important;
+    color: var(--mute) !important;
+    font-weight: 500 !important;
+  }
+  #crmWebToEntityForm .zcwf_col_lab label span[style*="color:red"] {
+    color: var(--rust) !important;
+    margin-left: 4px;
+  }
+  #crmWebToEntityForm .zcwf_col_fld {
+    width: 100% !important;
+    float: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  #crmWebToEntityForm .zcwf_col_fld input[type="text"] {
+    width: 100% !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-bottom: 1px solid var(--line) !important;
+    border-radius: 0 !important;
+    padding: 0.6rem 0 0.75rem !important;
+    font-family: 'Manrope', sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 300 !important;
+    color: var(--ink) !important;
+    float: none !important;
+    transition: border-color 0.3s ease;
+  }
+  #crmWebToEntityForm .zcwf_col_fld input[type="text"]:focus {
+    outline: none !important;
+    border-bottom-color: var(--rust) !important;
+  }
+  #crmWebToEntityForm .zcwf_col_help { display: none !important; }
+  #crmWebToEntityForm .zcwf_col_fld input[type="submit"].formsubmit {
+    background: var(--ink) !important;
+    background-image: none !important;
+    color: var(--cream) !important;
+    font-family: 'Manrope', sans-serif !important;
+    font-size: 11px !important;
+    letter-spacing: 0.28em !important;
+    text-transform: uppercase !important;
+    font-weight: 500 !important;
+    padding: 1.1rem 2.25rem !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    max-width: none !important;
+    cursor: pointer !important;
+    transition: background-color 0.3s ease;
+  }
+  #crmWebToEntityForm .zcwf_col_fld input[type="submit"].formsubmit:hover {
+    background: var(--rust) !important;
+  }
+  #crmWebToEntityForm .zcwf_col_fld input[type="reset"].zcwf_button {
+    background: transparent !important;
+    color: var(--mute) !important;
+    border: 1px solid var(--line) !important;
+    border-radius: 0 !important;
+    padding: 1.1rem 1.75rem !important;
+    font-family: 'Manrope', sans-serif !important;
+    font-size: 11px !important;
+    letter-spacing: 0.28em !important;
+    text-transform: uppercase !important;
+    font-weight: 500 !important;
+    max-width: none !important;
+    margin-left: 0.5rem !important;
+    cursor: pointer !important;
+    transition: color 0.3s ease, border-color 0.3s ease;
+  }
+  #crmWebToEntityForm .zcwf_col_fld input[type="reset"].zcwf_button:hover {
+    color: var(--ink) !important;
+    border-color: var(--ink) !important;
+  }
+  /* Submit row sits in its own bordered band */
+  #crmWebToEntityForm > form > .zcwf_row:last-of-type {
+    margin-top: 1rem !important;
+    padding-top: 2rem !important;
+    border-top: 1px solid var(--line) !important;
+  }
+  @media (max-width: 600px) {
+    #crmWebToEntityForm .zcwf_col_fld input[type="submit"].formsubmit,
+    #crmWebToEntityForm .zcwf_col_fld input[type="reset"].zcwf_button {
+      width: 100% !important;
+      margin-left: 0 !important;
+      margin-top: 0.5rem !important;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ════════════ HEADER ════════════ -->
+<header class="site-header">
+  <div class="row">
+    <a href="index.html" class="logo-mark">
+      <img src="assets/rockwood-monogram.png" alt="Rockwood Kitchens monogram">
+      <div>
+        <div class="title">ROCKWOOD&nbsp;KITCHENS</div>
+        <div class="sub">Fine Functional Art</div>
+      </div>
+    </a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">Philosophy</a>
+      <a href="services.html">Services</a>
+      <a href="process.html">Process</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html" class="current">Contact</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<!-- ════════════ PAGE TITLE ════════════ -->
+<section style="padding-top: 14rem; padding-bottom: 6rem;">
+  <div class="container">
+    <div style="max-width: 880px;">
+      <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2.5rem;">
+        <span class="rule-short"></span>
+        <span class="eyebrow">Contact</span>
+      </div>
+      <h1 class="h-hero">
+        Begin a <span class="italic">conversation</span>.
+      </h1>
+      <p class="lead" style="margin-top: 3rem; max-width: 720px;">
+        Every Rockwood kitchen begins with a conversation. Leave us your details and we'll be in touch to arrange a Discovery visit at your home — at your convenience, with no obligation.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ FORM + CONTACT SPLIT ════════════ -->
+<section class="section" style="padding-top: 2rem;">
+  <div class="container">
+    <div class="grid-split-7-5" style="align-items: start; gap: clamp(3rem, 6vw, 6rem);">
+
+      <!-- ─── LEFT: Zoho-wired form ─── -->
+      <div>
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+          <span class="rule-short"></span>
+          <span class="eyebrow">Leave Your Details</span>
+        </div>
+        <h2 class="h-section" style="margin-bottom: 1.5rem;">
+          We'll be in <span class="italic">touch</span>.
+        </h2>
+        <p class="body-text" style="margin-bottom: 3rem; max-width: 540px;">
+          A short form. We respond personally to every enquiry, usually within one working day.
+        </p>
+
+        <!-- ═══════════════════════════════════════════════════════════════
+             ZOHO WEB-TO-LEAD FORM
+             Wiring untouched. Visual styling applied via head <style> block.
+             Do NOT modify hidden inputs, action URL, script function names,
+             or the analytics tracking script below.
+             ═══════════════════════════════════════════════════════════════ -->
+        <div id='crmWebToEntityForm' class='zcwf_lblLeft crmWebToEntityForm' style='background-color: white;color: black;max-width: 600px;'>
+          <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+          <META HTTP-EQUIV='content-type' CONTENT='text/html;charset=UTF-8'>
+          <form id='webform7419011000000605486' action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads7419011000000605486 method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory7419011000000605486()' accept-charset='UTF-8'>
+            <input type='text' style='display:none;' name='xnQsjsdp' value='9503e17b5dd445a5d4189681035c12e0ab6445d4ccbe4411b3f2cb0561a80763'>
+            <input type='hidden' name='zc_gad' id='zc_gad' value=''>
+            <input type='text' style='display:none;' name='xmIwtLD' value='451052d887256939861690e178a3501aed33ff0347219a597b20e7a841704a5f24e2f8d025a16df8af23986d213c7ef7'>
+            <input type='text' style='display:none;' name='actionType' value='TGVhZHM='>
+            <input type='text' style='display:none;' name='returnURL' value='null'>
+            <!-- Do not remove this code. -->
+
+            <div class='zcwf_title' style='max-width: 600px;color: black; font-family:Arial;'>Online form</div>
+
+            <div class='zcwf_row'>
+              <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
+                <label for='First_Name'>First Name</label>
+              </div>
+              <div class='zcwf_col_fld'>
+                <input type='text' id='First_Name' aria-required='false' aria-label='First Name' name='First Name' aria-valuemax='40' maxlength='40'>
+                <div class='zcwf_col_help'></div>
+              </div>
+            </div>
+
+            <div class='zcwf_row'>
+              <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
+                <label for='Last_Name'>Last Name <span style='color:red;'>*</span></label>
+              </div>
+              <div class='zcwf_col_fld'>
+                <input type='text' id='Last_Name' aria-required='true' aria-label='Last Name' name='Last Name' aria-valuemax='80' maxlength='80'>
+                <div class='zcwf_col_help'></div>
+              </div>
+            </div>
+
+            <div class='zcwf_row'>
+              <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
+                <label for='Phone'>Phone</label>
+              </div>
+              <div class='zcwf_col_fld'>
+                <input type='text' id='Phone' aria-required='false' aria-label='Phone' name='Phone' aria-valuemax='30' maxlength='30'>
+                <div class='zcwf_col_help'></div>
+              </div>
+            </div>
+
+            <div class='zcwf_row'>
+              <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
+                <label for='Email'>Email</label>
+              </div>
+              <div class='zcwf_col_fld'>
+                <input type='text' ftype='email' autocomplete='false' id='Email' aria-required='false' aria-label='Email' name='Email' aria-valuemax='100' crmlabel='' maxlength='100'>
+                <div class='zcwf_col_help'></div>
+              </div>
+            </div>
+
+            <input type='text' type='hidden' style='display: none;' name='aG9uZXlwb3Q' value=''/>
+
+            <div class='zcwf_row'>
+              <div class='zcwf_col_lab'></div>
+              <div class='zcwf_col_fld'>
+                <input type='submit' id='formsubmit' role='button' class='formsubmit zcwf_button' value='Send Enquiry' aria-label='Send Enquiry' title='Send Enquiry'>
+                <input type='reset' class='zcwf_button' role='button' name='reset' value='Reset' aria-label='Reset' title='Reset'>
+              </div>
+            </div>
+
+            <script>
+              function validateEmail7419011000000605486(){
+                var form = document.forms['WebToLeads7419011000000605486'];
+                var emailFld = form.querySelectorAll('[ftype=email]');
+                var i;
+                for(i = 0; i < emailFld.length; i++ ) {
+                  var emailVal = emailFld[i].value;
+                  if ((emailVal.replace (/^\s+|\s+$/g,'') ) .length != 0) {
+                    var atpos = emailVal.indexOf('@');
+                    var dotpos = emailVal.lastIndexOf('.');
+                    if(atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= emailVal.length) {
+                      alert('Please enter a valid email address. ');
+                      emailFld[i].focus();
+                      return false;
+                    }
+                  }
+                }
+                return true;
+              }
+              function checkMandatory7419011000000605486(){
+                var mndFileds = new Array('Last Name');
+                var fldLangVal = new Array('Last\x20Name');
+                for (i = 0; i < mndFileds.length; i++ ) {
+                  var fieldObj = document.forms['WebToLeads7419011000000605486'] [mndFileds[i]];
+                  if (fieldObj) {
+                    if(((fieldObj.value) .replace (/^\s+|\s+$/g,'') ) .length == 0) {
+                      if (fieldObj.type == 'file') {
+                        alert('Please select a file to upload.');
+                        fieldObj.focus();
+                        return false;
+                      }
+                      alert(fldLangVal[i] + ' cannot be empty.');
+                      fieldObj.focus();
+                      return false;
+                    } else if (fieldObj.nodeName == 'SELECT') {
+                      if (fieldObj.options[fieldObj.selectedIndex].value == '-None-') {
+                        alert(fldLangVal[i] + ' cannot be none.');
+                        fieldObj.focus();
+                        return false;
+                      }
+                    } else if (fieldObj.type == 'checkbox') {
+                      if (fieldObj.checked == false) {
+                        alert('Please accept  ' + fldLangVal[i]);
+                        fieldObj.focus();
+                        return false;
+                      }
+                    }
+                    try{
+                      if (fieldObj.name == 'Last Name') {
+                        name = fieldObj.value;
+                      }
+                    } catch (e){}
+                  }
+                }
+                if ( !validateEmail7419011000000605486 () ) {
+                  return false;
+                }
+                var urlparams = new URLSearchParams(window.location.search);
+                if (urlparams.has ('service') && (urlparams.get ('service') === 'smarturl') ) {
+                  var webform = document.getElementById('webform7419011000000605486');
+                  var service = urlparams.get('service');
+                  var smarturlfield = document.createElement('input');
+                  smarturlfield.setAttribute('type', 'hidden');
+                  smarturlfield.setAttribute('value', service);
+                  smarturlfield.setAttribute('name', 'service');
+                  webform.appendChild(smarturlfield);
+                }
+                document.querySelector('.crmWebToEntityForm .formsubmit').setAttribute('disabled', true);
+              }
+              function tooltipShow7419011000000605486(el){
+                var tooltip = el.nextElementSibling;
+                var tooltipDisplay = tooltip.style.display;
+                if (tooltipDisplay == 'none') {
+                  var allTooltip = document.getElementsByClassName('zcwf_tooltip_over');
+                  for (i = 0; i < allTooltip.length; i++ ) {
+                    allTooltip[i].style.display = 'none';
+                  }
+                  tooltip.style.display = 'block';
+                } else {
+                  tooltip.style.display = 'none';
+                }
+              }
+            </script>
+            <!-- Do not remove this --- Analytics Tracking code starts -->
+            <script id='wf_anal' src='https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=9b1ed1f395fda1ff43efff12fa744415a56a4f72cf7b85a8be82dfe9bfdbd4ff03e9e22bbb314cdbba7b347da929924egid9cd0a86890c1ec262366f82a599fef34d032906aa5dac471b636bd46491865dbgidd1c2db763b5e30fce1b5ffa05596070ea5cbb26a2e0d41c27bb22261000afa52gid477b3af73ef2b96a97baf7772b003d2fc8e2e9cde5d437fef6ba7e34341106ad&tw=ee3903e30158ac9fff5a97fd969c381e83d16996dc0ba3a746257d50054dd4a0'></script>
+            <!-- Do not remove this --- Analytics Tracking code ends. -->
+          </form>
+        </div>
+        <!-- ═══════════════════════════════════════════════════════════════ -->
+
+        <p class="submit-note" style="font-family: 'Noto Serif', serif; font-style: italic; color: var(--mute); font-size: 13px; margin-top: 2rem; max-width: 480px; line-height: 1.6;">
+          By submitting this form, your enquiry will be received privately by the studio. We never share details with third parties, and we respond personally — not automatically.
+        </p>
+      </div>
+
+      <!-- ─── RIGHT: Direct contact details ─── -->
+      <div>
+        <div style="background: var(--cream-2); padding: clamp(2rem, 4vw, 3.5rem);">
+
+          <div class="eyebrow" style="margin-bottom: 1.5rem;">Direct Lines</div>
+
+          <div style="margin-bottom: 2.5rem;">
+            <div class="eyebrow-mute" style="font-size: 9px; margin-bottom: 0.5rem;">Telephone</div>
+            <a href="tel:+27813498677" style="font-family: 'Noto Serif', serif; font-size: 1.45rem; color: var(--ink); border-bottom: 1px solid var(--line); padding-bottom: 0.2rem; display: inline-block; transition: border-color 0.3s ease;">+27&nbsp;81&nbsp;349&nbsp;8677</a>
+          </div>
+
+          <div style="margin-bottom: 2.5rem;">
+            <div class="eyebrow-mute" style="font-size: 9px; margin-bottom: 0.5rem;">Email</div>
+            <a href="mailto:studio@rockwoodkitchens.co.za" style="font-family: 'Noto Serif', serif; font-size: 1.2rem; color: var(--ink); border-bottom: 1px solid var(--line); padding-bottom: 0.2rem; display: inline-block; transition: border-color 0.3s ease; word-break: break-all;">studio@rockwoodkitchens.co.za</a>
+          </div>
+
+          <div style="padding-top: 2rem; border-top: 1px solid var(--line); margin-bottom: 2rem;">
+            <div class="eyebrow" style="margin-bottom: 1.5rem;">Studio</div>
+            <div style="margin-bottom: 1.25rem;">
+              <div class="eyebrow-mute" style="font-size: 9px; margin-bottom: 0.4rem;">Based In</div>
+              <div style="font-family: 'Noto Serif', serif; font-size: 1.1rem; color: var(--ink);">Ballito</div>
+              <div class="body-text" style="font-size: 13px; margin-top: 0.2rem;">KwaZulu-Natal North Coast</div>
+            </div>
+            <div>
+              <div class="eyebrow-mute" style="font-size: 9px; margin-bottom: 0.4rem;">Visits</div>
+              <div style="font-family: 'Noto Serif', serif; font-size: 1.1rem; color: var(--ink);">By appointment</div>
+              <div class="body-text" style="font-size: 13px; margin-top: 0.2rem;">At your home, at your convenience</div>
+            </div>
+          </div>
+
+          <div style="padding-top: 1.5rem; border-top: 1px solid var(--line);">
+            <p style="font-family: 'Noto Serif', serif; font-style: italic; color: var(--mute-2); font-size: 14px; line-height: 1.6;">
+              We deliberately take on a limited number of projects each year. If our calendar is full when you reach us, we will tell you honestly and suggest the next available window.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ CLOSING NOTE ════════════ -->
+<section style="background: var(--ink-2); color: var(--cream); padding: clamp(4rem, 8vw, 7rem) 0;">
+  <div class="container">
+    <div style="text-align: center; max-width: 720px; margin: 0 auto;">
+      <div style="display: inline-flex; align-items: center; gap: 1rem; margin-bottom: 2.5rem;">
+        <span class="rule-gold"></span>
+        <span class="eyebrow-gold">A Note On Discretion</span>
+        <span class="rule-gold"></span>
+      </div>
+      <p style="font-family: 'Noto Serif', serif; font-style: italic; font-weight: 300; font-size: clamp(1.2rem, 2.2vw, 1.6rem); line-height: 1.55; color: var(--cream);">
+        "Most of our clients prefer to be introduced rather than to advertise their kitchens. If you've been recommended, please mention the home or the architect — it helps us shape the right first <span style="color: var(--gold);">conversation</span>."
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ FOOTER ════════════ -->
+<footer class="site-footer">
+  <div class="row">
+    <div class="footer-brand">
+      <div class="center-block">
+        <img src="assets/rockwood-monogram.png" alt="Rockwood Kitchens">
+        <div class="title">ROCKWOOD&nbsp;KITCHENS</div>
+        <div class="sub-rule"></div>
+        <div class="sub">Fine Functional Art</div>
+      </div>
+      <p class="footer-tagline" style="margin: 2rem auto 0; text-align: center;">
+        Bespoke kitchens designed and made for the KwaZulu-Natal North Coast.
+      </p>
+    </div>
+    <div class="footer-col">
+      <h5>Explore</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Philosophy</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="process.html">Process</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li class="current"><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Studio</h5>
+      <ul class="contact-list">
+        <li>Ballito</li>
+        <li class="muted">KwaZulu-Natal · North Coast</li>
+        <li style="margin-top: 1rem;">By appointment</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul class="contact-list">
+        <li><a href="tel:+27813498677">+27&nbsp;81&nbsp;349&nbsp;8677</a></li>
+        <li><a href="mailto:studio@rockwoodkitchens.co.za">studio@rockwoodkitchens.co.za</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="copyright-row">
+    <span>© 2026 Rockwood Kitchens · All rights reserved</span>
+    <span class="closing-italic">Composed with intention. · Delivered with care.</span>
+  </div>
+</footer>
+
+<script>
+  document.querySelector('.menu-toggle')?.addEventListener('click', () => {
+    const nav = document.querySelector('.site-nav');
+    nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+  });
+</script>
+
+</body>
+</html>

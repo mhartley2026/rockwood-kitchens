@@ -1,0 +1,22 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*~
+
+# Temporary preview renders (QA artefacts only)
+*-preview.png
+preview-*.png
+
+# Local environment files
+.env
+.env.local
+
+# Build/dependency folders (in case we add tooling later)
+node_modules/
+dist/
+.cache/
