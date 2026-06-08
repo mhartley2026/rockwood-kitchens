@@ -174,9 +174,25 @@ a { color: inherit; text-decoration: none; }
 
 /* ─── Header ─── */
 .site-header {
-  position: absolute; top: 0; left: 0; right: 0; z-index: 40;
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   padding: 2.5rem clamp(1.5rem, 5vw, 5rem);
+  border-bottom: 1px solid transparent;
+  transition: background 0.35s ease, padding 0.35s ease, border-color 0.35s ease;
 }
+.site-header .logo-mark img { transition: height 0.35s ease; }
+.site-header.scrolled {
+  background: rgba(10,10,10,0.92);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  padding-top: 1.35rem; padding-bottom: 1.35rem;
+  border-bottom: 1px solid var(--line-dk);
+}
+.site-header.scrolled .logo-mark img { height: 44px; }
+.site-header.scrolled .logo-mark .title { color: var(--cream); }
+.site-header.scrolled .logo-mark .sub { color: var(--mute-3); }
+.site-header.scrolled .site-nav a { color: var(--cream); }
+.site-header.scrolled .site-nav a:hover,
+.site-header.scrolled .site-nav a.current { color: var(--rust); }
+html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
 .site-header .row {
   max-width: var(--maxw); margin: 0 auto;
   display: flex; align-items: center; justify-content: space-between;
